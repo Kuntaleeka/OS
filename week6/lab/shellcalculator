@@ -1,0 +1,43 @@
+add()
+{
+    result=$(expr $num1 + $num2)
+    echo "Result:$result"
+}
+subtract()
+{
+    result=$(expr $num1 - $num2)
+    echo "Result:$result"
+}
+multiply()
+{
+    result=$(expr $num1 \* $num2)
+    echo "Result:$result"
+}
+divide()
+{
+    result=$(expr $num1 / $num2)
+    echo "Result:$result"
+}
+echo "Enter the operation you want to perform (+,-,*,/)"
+read op
+echo "Enter first number"
+read num1
+echo "Enter second number"
+read num2
+case $op in
+"+")
+add $num1 $num2
+;;
+"-")
+subtract $num1 $num2
+;;
+"*")
+multiply $num1 $num2
+;;
+"/")
+divide $num1 $num2
+;;
+*)
+echo "Invalid operation"
+;;
+esac
