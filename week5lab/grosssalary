@@ -1,0 +1,9 @@
+echo "Enter Rajesh's Basic Saalary"
+read BASIC
+DA=`expr $BASIC \* 52 / 100`
+HRA=`expr $BASIC \* 15 / 100`
+CPF=`expr \($BASIC + $DA\)\* 12 / 100`
+GROSS=`expr $BASIC + $DA + $HRA`
+TAKE_HOME=`expr $GROSS - $CPF`
+echo "Rajesh's gross salary is :$GROSS"
+echo "Rajesh's takehome salary is :$TAKE_HOME"
