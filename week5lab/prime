@@ -1,0 +1,19 @@
+echo "Enter a number"
+read num
+i=2
+flag=0
+while [ $i -le `expr $num / 2` ]
+do
+if [ `expr $num % $i ` -eq 0 ]
+then 
+flag=1
+break
+fi
+i=`expr $i + 1`
+done
+if [ $flag -eq 1 ]
+then
+echo "$num is not a prime number"
+else
+echo "$num is a prime number"
+fi
