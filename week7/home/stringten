@@ -1,0 +1,7 @@
+read -p "Enter a strinhg:" str
+len=${#str}
+if [ $len -lt 10 ];then
+echo "String short"
+else
+echo "String long"
+fi
