@@ -1,0 +1,10 @@
+if [ "$1" == "ln" ]
+then
+find -typef -printf "%T + \t % p \n" | sort
+elif [ "$2" == "la" ]
+then
+find -typef -printf "%A + \t % p \n" | sort
+else
+ls -l
+fi
+
